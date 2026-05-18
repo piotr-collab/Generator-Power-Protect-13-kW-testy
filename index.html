@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Power Protect EcoGenerator 13 kW - plan badań</title>
+    <meta
+      name="description"
+      content="Statyczna strona projektu badań i testów generatora Power Protect EcoGenerator 13 kW 3F."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__media" aria-hidden="true">
+        <img src="hero-generator.jpeg" alt="" />
+      </div>
+      <nav class="topbar" aria-label="Główna nawigacja">
+        <a class="brand" href="#top" aria-label="Power Protect EcoGenerator 13 kW">
+          <span class="brand__mark">PP</span>
+          <span>EcoGenerator 13 kW</span>
+        </a>
+        <div class="topbar__links">
+          <a href="#profil">Profil dobowy</a>
+          <a href="#scenariusze">Scenariusze</a>
+          <a href="#pomiary">Pomiary</a>
+          <a class="button button--small" href="PP_EcoGenerator_13kW_plan_badan.xlsx">Pobierz Excel</a>
+        </div>
+      </nav>
+      <section id="top" class="hero__content">
+        <p class="eyebrow">Projekt badania FAT i testów dobowych</p>
+        <h1>Power Protect EcoGenerator 13 kW 3F</h1>
+        <p class="lead">
+          Plan badania hybrydowego generatora pod realnym profilem obciążenia:
+          BESS, falownik, PV, agregat backup, zdarzenia awaryjne i pomiary
+          prowadzone przez operatora w godzinach dziennych.
+        </p>
+        <div class="hero__actions">
+          <a class="button" href="PP_EcoGenerator_13kW_plan_badan.xlsx">Pobierz arkusz Excel</a>
+          <a class="button button--ghost" href="#profil">Zobacz profil 24h</a>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="section section--summary" aria-labelledby="summary-title">
+        <div class="section__inner summary-grid">
+          <div>
+            <p class="eyebrow">Cel</p>
+            <h2 id="summary-title">Co sprawdza badanie</h2>
+            <p>
+              Test ma potwierdzić stabilność napięcia i częstotliwości,
+              zachowanie przy skokach do 13 kW, reakcję na asymetrię faz,
+              logikę startu agregatu przy niskim SOC, ładowanie magazynu
+              energii oraz działanie E-STOP i restartu kontrolowanego.
+            </p>
+          </div>
+          <dl class="metrics" aria-label="Główne parametry">
+            <div>
+              <dt>Moc testowa</dt>
+              <dd>13 kW</dd>
+            </div>
+            <div>
+              <dt>Układ</dt>
+              <dd>3F 400/230 V</dd>
+            </div>
+            <div>
+              <dt>PV</dt>
+              <dd>ok. 2,46 kWp</dd>
+            </div>
+            <div>
+              <dt>BESS</dt>
+              <dd>ok. 20 kWh</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section id="profil" class="section" aria-labelledby="profile-title">
+        <div class="section__inner">
+          <div class="section__heading">
+            <div>
+              <p class="eyebrow">Profil dobowy</p>
+              <h2 id="profile-title">Obciążenie według godzin</h2>
+            </div>
+            <p>
+              Noc jest przewidziana jako automatyczny zapis danych i monitoring.
+              Zdarzenia ręczne, piki mocy, E-STOP i symulacje awarii są
+              zaplanowane w godzinach dziennych.
+            </p>
+          </div>
+
+          <div class="chart" role="img" aria-label="Wykres planowanego obciążenia generatora w ciągu doby">
+            <div class="chart__grid">
+              <span>13 kW</span>
+              <span>9 kW</span>
+              <span>5 kW</span>
+              <span>0 kW</span>
+            </div>
+            <div class="bars" aria-hidden="true">
+              <span style="--load: 2" title="00:00, 2 kW"></span>
+              <span style="--load: 1" title="01:00, 1 kW"></span>
+              <span style="--load: 1" title="02:00, 1 kW"></span>
+              <span style="--load: 1" title="03:00, 1 kW"></span>
+              <span style="--load: 1" title="04:00, 1 kW"></span>
+              <span style="--load: 1" title="05:00, 1 kW"></span>
+              <span style="--load: 1" title="06:00, 1 kW"></span>
+              <span style="--load: 4" title="07:00, 4 kW"></span>
+              <span style="--load: 4" title="08:00, 4 kW"></span>
+              <span class="bars__peak" style="--load: 4" title="09:00, 4 kW plus pik 13 kW"></span>
+              <span style="--load: 2" title="10:00, 2 kW"></span>
+              <span style="--load: 2" title="11:00, 2 kW"></span>
+              <span style="--load: 2" title="12:00, 2 kW"></span>
+              <span style="--load: 2" title="13:00, 2 kW"></span>
+              <span style="--load: 4" title="14:00, 4 kW"></span>
+              <span style="--load: 4" title="15:00, 4 kW"></span>
+              <span style="--load: 3" title="16:00, 3 kW"></span>
+              <span style="--load: 3" title="17:00, 3 kW"></span>
+              <span style="--load: 3" title="18:00, 3 kW"></span>
+              <span style="--load: 3" title="19:00, 3 kW"></span>
+              <span style="--load: 2" title="20:00, 2 kW"></span>
+              <span style="--load: 2" title="21:00, 2 kW"></span>
+              <span style="--load: 2" title="22:00, 2 kW"></span>
+              <span style="--load: 2" title="23:00, 2 kW"></span>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Godziny</th>
+                  <th>Obciążenie</th>
+                  <th>Tryb</th>
+                  <th>Obsługa</th>
+                  <th>Zdarzenie testowe</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>00:00-06:00</td>
+                  <td>2 kW, potem 1 kW</td>
+                  <td>BESS / tryb cichy</td>
+                  <td>Automatyczny zapis danych</td>
+                  <td>Brak ręcznej obsługi</td>
+                </tr>
+                <tr>
+                  <td>07:00-09:00</td>
+                  <td>4 kW</td>
+                  <td>PV + BESS / falownik</td>
+                  <td>Operator na miejscu</td>
+                  <td>Cold start, kontrola logów, pik 13 kW przez 3 min</td>
+                </tr>
+                <tr>
+                  <td>10:00-13:00</td>
+                  <td>2 kW</td>
+                  <td>PV + BESS</td>
+                  <td>Operator na miejscu</td>
+                  <td>Priorytet PV/BESS i obserwacja ładowania</td>
+                </tr>
+                <tr>
+                  <td>14:00-15:00</td>
+                  <td>4 kW</td>
+                  <td>Falownik / BESS</td>
+                  <td>Operator na miejscu</td>
+                  <td>Asymetria faz L1/L2/L3</td>
+                </tr>
+                <tr>
+                  <td>16:00-19:00</td>
+                  <td>3 kW</td>
+                  <td>BESS + agregat według SOC</td>
+                  <td>Operator na miejscu</td>
+                  <td>Niski SOC, start agregatu, E-STOP, restart kontrolowany</td>
+                </tr>
+                <tr>
+                  <td>20:00-24:00</td>
+                  <td>2 kW</td>
+                  <td>BESS / standby</td>
+                  <td>Automatyczny zapis danych</td>
+                  <td>Brak ręcznej obsługi</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="scenariusze" class="section section--soft" aria-labelledby="scenarios-title">
+        <div class="section__inner">
+          <div class="section__heading">
+            <div>
+              <p class="eyebrow">Scenariusze</p>
+              <h2 id="scenarios-title">Zakres testów w arkuszu</h2>
+            </div>
+            <p>
+              Każdy scenariusz ma własną zakładkę w Excelu, z krokami,
+              warunkami początkowymi, oczekiwaną reakcją, wynikiem i miejscem
+              na uwagi.
+            </p>
+          </div>
+          <div class="cards">
+            <article class="card">
+              <h3>Doba typowa</h3>
+              <p>Realny profil klienta 24h, z nocnym monitoringiem bez operatora.</p>
+            </article>
+            <article class="card">
+              <h3>FAT 25/50/75/100%</h3>
+              <p>Stopniowe obciążenie symetryczne do 13 kW i ocena stabilności.</p>
+            </article>
+            <article class="card">
+              <h3>Asymetria i skoki</h3>
+              <p>Nierówny rozkład faz, skok do 13 kW i powrót do niskiej mocy.</p>
+            </article>
+            <article class="card">
+              <h3>Awaryjne</h3>
+              <p>E-STOP, restart kontrolowany, niski SOC, komunikacja i paliwo.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="pomiary" class="section" aria-labelledby="measure-title">
+        <div class="section__inner measure-grid">
+          <div>
+            <p class="eyebrow">Parametry</p>
+            <h2 id="measure-title">Co wpisywać podczas testu</h2>
+            <p>
+              Rejestr pomiarowy obejmuje wartości godzinowe i próbki dodatkowe
+              przy zdarzeniach. Arkusz przewiduje też zapis paliwa, alarmów,
+              temperatur i dowodów z testu.
+            </p>
+          </div>
+          <ul class="check-list">
+            <li>Napięcia L-N i L-L, prądy L1/L2/L3, moc na fazach i suma.</li>
+            <li>Częstotliwość, cosφ, kVA, THD, SOC, PV i ładowanie BESS.</li>
+            <li>Stan agregatu, dolewki paliwa, temperatury, spaliny i hałas.</li>
+            <li>Alarmy, logi, wynik OK/NOK i uwagi operatora.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <span>Power Protect EcoGenerator 13 kW - plan badań</span>
+        <a href="PP_EcoGenerator_13kW_plan_badan.xlsx">Pobierz Excel</a>
+      </div>
+    </footer>
+  </body>
+</html>

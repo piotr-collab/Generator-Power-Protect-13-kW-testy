@@ -5,6 +5,10 @@ EcoGenerator Power Protect 13 kW 3F.
 
 ## Pliki
 
+- `index.html` - statyczna strona projektu gotowa do publikacji przez
+  GitHub Pages.
+- `styles.css` - style strony HTML.
+- `hero-generator.jpeg` - zdjęcie generatora użyte w nagłówku strony.
 - `PP_EcoGenerator_13kW_plan_badan.xlsx` - główny skoroszyt Excel do
   prowadzenia testów, wpisywania pomiarów i podsumowania wyniku FAT.
 - `build_pp_13kw_test_workbook.py` - skrypt odtwarzający skoroszyt.
